@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 import NetworkGraph from "./NetworkGraph";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <span className={styles.brand}>nodeheus</span>
         <span className={styles.est}>Est. MMXXVI</span>
         <nav className={styles.links}>
+          <Link href="/flow">Flow</Link>
           <a href="#network">Network</a>
           <a href="#divisions">Divisions</a>
           <a href="#contact">Contact</a>
@@ -40,6 +42,9 @@ export default function Home() {
             finance and beyond. One holding company. Every layer of the stack.
           </p>
           <p className={styles.measure}>We measure success in decades, not quarters.</p>
+          <Link className={styles.cta} href="/flow">
+            Now building — nodeheus Flow →
+          </Link>
         </section>
 
         <section id="network" className={styles.networkSection}>

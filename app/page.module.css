@@ -91,6 +91,23 @@
   color: var(--muted);
 }
 
+.cta {
+  display: inline-block;
+  margin-top: 40px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--accent);
+  padding: 12px 22px;
+  transition: opacity 0.2s ease;
+}
+
+.cta:hover {
+  opacity: 0.88;
+}
+
 /* network */
 .networkSection {
   padding: 24px 0 96px;
