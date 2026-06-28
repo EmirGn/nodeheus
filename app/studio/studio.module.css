@@ -99,29 +99,6 @@
   padding: 86px 28px 0;
 }
 
-/* Skip rendering off-screen sections (incl. their expensive liquid-chrome
-   filters) until they scroll near the viewport. Only the hero paints on load,
-   and filter work is spread out instead of all 6 firing at once. The
-   intrinsic-size hints keep the scrollbar stable before first render. */
-.statement,
-.section,
-.nextProject,
-.connect {
-  content-visibility: auto;
-}
-.statement {
-  contain-intrinsic-size: auto 340px;
-}
-.section {
-  contain-intrinsic-size: auto 760px;
-}
-.nextProject {
-  contain-intrinsic-size: auto 380px;
-}
-.connect {
-  contain-intrinsic-size: auto 600px;
-}
-
 .sectionTitle {
   font-size: clamp(28px, 3.6vw, 44px);
   font-weight: 500;
