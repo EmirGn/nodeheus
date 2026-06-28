@@ -43,6 +43,19 @@ npm run start    # serve the production build
 | `app/NetworkGraph.tsx` | Interactive node-graph (client component) |
 | `app/layout.tsx` | Root layout, fonts, metadata |
 | `app/globals.css` | Theme tokens, paper background, base styles |
+| `app/studio/` | **studio.nodeheus.com** — the agency subsite (dark theme) |
+| `middleware.ts` | Subdomain routing (`studio.*` → `/studio`) |
+
+### Subdomains
+
+`studio.nodeheus.com` is served from `app/studio/` via `middleware.ts`, which
+rewrites the `studio.*` host onto the `/studio` route (the prefix never appears
+in the URL). Locally, reach it at `http://localhost:3000/studio` or
+`http://studio.localhost:3000`. The studio subsite is a self-contained, dark
+"liquid-chrome" agency page — design + engineering arm of nodeheus — with its
+own [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk) display
+font and original SVG-filter artwork (`app/studio/FluidArt.tsx`, no image
+assets).
 
 Division data lives in the `divisions` array in `app/page.tsx` and the `NODES`
 array in `app/NetworkGraph.tsx`.
