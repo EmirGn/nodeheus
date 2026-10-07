@@ -9,7 +9,14 @@ const nextConfig: NextConfig = {
   // studio.nodeheus.com is rewritten to /studio by middleware before this runs.
   async rewrites() {
     return {
-      beforeFiles: [{ source: "/", destination: "/home.html" }],
+      beforeFiles: [
+        {
+          source: "/",
+          destination: "/home.html",
+          // Never apply on the studio subdomain, whatever order routing runs in.
+          missing: [{ type: "host", value: "studio\\..*" }],
+        },
+      ],
     };
   },
 };
